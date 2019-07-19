@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>repl.it</title>
+	<link href="style.css" rel="stylesheet" type="text/css" />
+	<meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,minimum-scale=1">
+</head>
+
+<body>
+	<div class="wrapper">
+		<div id="loading">Loading...</div>
+		<div id="instructions">
+      <h3>how to play</h3>
+      * eat all the squares you can<br>
+      * on desktop: move with arrow keys<br>
+      * on mobile: move by swiping<br>
+      * when your score reaches 0, it's over!
+		</div>
+    <div id="gameOver"></div>
+		<button id="begin">Start!</button>
+    <canvas id="canvas"></canvas>
+    <div id="hud">
+      <div id="score"></div>
+      <div id="maxScore"></div>
+    </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/13.8.17/Tone.min.js"></script>
+    <script src="util.js"></script>
+    <script src="constants.js"></script>
+    <script src="music.js"></script>
+    <script src="particle.js"></script>
+    <script src="hud.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,140 @@
+body {
+  background: #000;
+  margin: 0;
+  padding: 0;
+  color: #f0f0f0;
+  transition: background-color .1s ease-in-out;
+  overflow: hidden;
+}
+body, button, a {
+  font-family: Monaco, 'Courier New', Courier, monospace;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+}
+#canvas {
+  width: 376px;
+  margin: 40px auto;
+  display: none;
+  max-width: 100%;
+  height: auto;
+}
+#loading {
+  margin: 40px auto;
+  display: none;
+  text-align: center;
+  font-size: 32px;
+}
+#begin {
+  color: #aff;
+  text-decoration: none;
+  background: #366;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  padding: 15px;
+  border: #aff 8px solid;
+  width: 70%;
+  will-change: transform, filter;
+  transition: transform .2s ease-in-out, filter .5s ease-in;
+  max-width: 280px;
+  display: block;
+}
+
+#begin:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  filter: brightness(150%);
+}
+
+#instructions {
+  font-size: 16px;
+  max-width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 0;
+  padding-bottom: 40px;
+}
+
+@media (max-width: 320px) {
+  #instructions {
+    max-width: 280px;
+    font-size: 13px;
+  }
+}
+
+#gameOver {
+  display: none;
+  text-align: center;
+  max-width: 240px;
+  font-size: 20px;
+}
+
+a {
+  color: #aff;
+  font-weight: bold;
+  transition: transform .2s ease-in-out, filter .5s ease-in;
+  text-decoration: underline;
+  display: inline-block;
+}
+a:visited {
+  color: #aff;
+}
+a:hover {
+  transform: scale(1.1);
+  filter: brightness(150%);
+}
+
+#score {
+  top: 20px;
+  font-size: 48px;
+  font-weight: bold;
+  position: absolute;
+  opacity: 0.9;
+
+  color: #fcc;
+  animation: neon1 1.5s ease-in-out infinite alternate;
+}
+
+#maxScore {
+  top: 20px;
+  font-size: 48px;
+  font-weight: bold;
+  position: absolute;
+  opacity: 0.9;
+
+  color: #cfc;
+  transition: transform .1s ease-in-out;
+  animation: neon2 1.5s ease-in-out infinite alternate;
+}
+
+.changed {
+  transform: scale(1.2);
+  opacity: 1;
+}
+
+@keyframes neon1 {
+  from {
+    text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 3px #fff, 0 0 4px #ff00de, 0 0 7px #ff00de, 0 0 8px #ff00de, 0 0 10px #ff00de, 0 0 15px #ff00de;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 0px #fff, 0 0 1px #fff, 0 0 2px #ff00de, 0 0 3px #ff00de, 0 0 4px #ff00de, 0 0 5px #ff00de, 0 0 7px #ff00de;
+  }
+}
+
+@keyframes neon2 {
+  from {
+    text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 3px #fff, 0 0 4px #00ffde, 0 0 7px #00ffde, 0 0 8px #00ffde, 0 0 10px #00ffde, 0 0 15px #00ffde;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 0px #fff, 0 0 1px #fff, 0 0 2px #00ffde, 0 0 3px #00ffde, 0 0 4px #00ffde, 0 0 5px #00ffde, 0 0 7px #00ffde;
+  }
+}
